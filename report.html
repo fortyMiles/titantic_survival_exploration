@@ -11773,7 +11773,7 @@ Run the code cell below to load our data and display the first few entries (pass
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -12615,7 +12615,7 @@ Run the code cell below to remove <strong>Survived</strong> as a feature of the 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Store the &#39;Survived&#39; feature in a new variable and remove it from the dataset</span>
@@ -14669,7 +14669,7 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">predictions_3</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -14689,14 +14689,15 @@ Make sure to keep track of the various features and conditions you tried before 
                 <span class="c1"># if a man younger than 10, he would be survived. </span>
                 <span class="n">survived</span> <span class="o">=</span> <span class="bp">True</span>
             <span class="k">elif</span> <span class="n">passenger</span><span class="p">[</span><span class="n">AGE</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">STRONG_AGE</span> <span class="ow">and</span> <span class="n">passenger</span><span class="p">[</span><span class="n">PCLASS</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="c1"># if a man older than 10 but younger than 40 and he was in upper class, he would be survived.  </span>
+                <span class="c1"># The data visualization shows if a male is not older than 40, and he was in the upper class</span>
+                <span class="c1"># the probability of his surviving is higher than other men. </span>
                 <span class="n">survived</span> <span class="o">=</span> <span class="bp">True</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">survived</span> <span class="o">=</span> <span class="bp">False</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">passenger</span><span class="p">[</span><span class="n">AGE</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">STRONG_AGE</span> <span class="ow">and</span> <span class="n">passenger</span><span class="p">[</span><span class="n">AGE</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">)</span> <span class="ow">and</span> <span class="n">passenger</span><span class="p">[</span><span class="n">PCLASS</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="c1"># if a woman older than 40(means she was not strong enough), and she was in Lower class</span>
-                <span class="c1"># she would not be survived. </span>
+                <span class="c1"># The data visualization shows if a female is odler than 40, and she was in the lower class</span>
+                <span class="c1"># the probability of her surviving is lower than other women. </span>
                 <span class="n">survived</span> <span class="o">=</span> <span class="bp">False</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">survived</span> <span class="o">=</span> <span class="bp">True</span>
@@ -14728,7 +14729,7 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">outcomes</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
